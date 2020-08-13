@@ -12,7 +12,7 @@ include_once 'template/header.html'
   </div>
     
       <?php
-      $path = '\nindy\doc\soal emodul.pdf';
+      $path = 'doc\soal emodul.pdf';
 
       echo "<iframe src='".$path."' width=\"100%\" style=\"height:400%\"></iframe>";
 

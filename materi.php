@@ -10,7 +10,7 @@ include_once 'template/header.html'
 
     
       <?php
-      $path = '\nindy\doc\materi pecahan.pdf';
+      $path = '\doc\materi pecahan.pdf';
 
       echo "<iframe src='".$path."' width=\"100%\" style=\"height:400%\"></iframe>";
 
