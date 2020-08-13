@@ -7,7 +7,7 @@ include_once 'template/header.html'
   
 
   <div class="row d-flex justify-content-between mb-3">
-    <h2>Materi</h2>
+    <h2>Soal Emodul</h2>
     <a href="#jawaban" class="btn btn-md btn-primary">Kebawah</a>
   </div>
     
@@ -294,6 +294,119 @@ include_once 'template/header.html'
       </div>
 
     </div>
+
+    <h5 class="my-5">2. Isian</h5>
+    <h6 class="my-2">Pengurangan</h6>
+    <div id="bag2">
+      
+      <div class="row ml-2 mr-2">
+        <h6 class="col">1.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+
+      <div class="row ml-2 mr-2">
+        <h6 class="col">2.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+
+      <div class="row ml-2 mr-2">
+        <h6 class="col">3.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+
+      <div class="row ml-2 mr-2">
+        <h6 class="col">4.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+
+      <div class="row ml-2 mr-2">
+        <h6 class="col">5.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+
+    </div>
+
+    <h6 class="my-2">Penjumlahan</h6>
+    <div id="bag2">
+      
+      <div class="row ml-2 mr-2">
+        <h6 class="col">1.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+      
+      <div class="row ml-2 mr-2">
+        <h6 class="col">2.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+
+      <div class="row ml-2 mr-2">
+        <h6 class="col">3.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+
+      <div class="row ml-2 mr-2">
+        <h6 class="col">4.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+
+      <div class="row ml-2 mr-2">
+        <h6 class="col">5.</h6>
+      </div>
+
+      <div class="row mx-4">
+        <div class="form-group">
+          <textarea class="form-control" id="11" cols="150" rows="3" style="min-height:100px;resize: vertical;"></textarea>
+        </div>
+      </div>
+
+    </div>
+
+    
 
   </main>
 <?php 
