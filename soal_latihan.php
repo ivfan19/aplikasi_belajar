@@ -8,7 +8,7 @@ include_once 'connection.php';
   
 
   <div class="row d-flex justify-content-between mb-3">
-    <h2>Soal Evaluasi</h2>
+    <h2>Soal Latihan</h2>
     <!-- <a href="#jawaban" class="btn btn-md btn-primary">Kebawah</a> -->
   </div>
     
