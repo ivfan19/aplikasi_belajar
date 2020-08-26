@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 25, 2020 at 12:22 AM
+-- Generation Time: Aug 26, 2020 at 02:58 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.3.20
 
@@ -35,22 +35,6 @@ CREATE TABLE `jawaban_siswa` (
   `jawaban` text NOT NULL,
   `type` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `jawaban_siswa`
---
-
-INSERT INTO `jawaban_siswa` (`id`, `no_soal`, `kd_jawab`, `jawaban`, `type`) VALUES
-(1, 1, 'mat1_1', 'tes', 'soal_evaluasi'),
-(2, 2, 'mat1_1', 'tes', 'soal_evaluasi'),
-(3, 3, 'mat1_1', 'tes', 'soal_evaluasi'),
-(4, 4, 'mat1_1', 'tes', 'soal_evaluasi'),
-(5, 5, 'mat1_1', 'tes', 'soal_evaluasi'),
-(6, 6, 'mat1_1', 'tes', 'soal_evaluasi'),
-(7, 7, 'mat1_1', 'tes', 'soal_evaluasi'),
-(8, 8, 'mat1_1', 'tes', 'soal_evaluasi'),
-(9, 9, 'mat1_1', 'tes', 'soal_evaluasi'),
-(10, 10, 'mat1_1', 'tes', 'soal_evaluasi');
 
 -- --------------------------------------------------------
 
@@ -104,13 +88,6 @@ CREATE TABLE `pk_jawab` (
   `tanggal_jawab` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `pk_jawab`
---
-
-INSERT INTO `pk_jawab` (`kd_jawab`, `kd_soal`, `tanggal_jawab`) VALUES
-('mat1_1', 'mat1', '2020-08-25 00:16:24');
-
 -- --------------------------------------------------------
 
 --
@@ -137,34 +114,6 @@ INSERT INTO `soal` (`kode_soal`, `mapel`, `tanggal_upload`) VALUES
 --
 
 CREATE TABLE `soal_evaluasi` (
-  `no_soal` int(1) NOT NULL,
-  `txt_soal` text NOT NULL,
-  `kode_soal` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `soal_evaluasi`
---
-
-INSERT INTO `soal_evaluasi` (`no_soal`, `txt_soal`, `kode_soal`) VALUES
-(1, 'Ahmad memiliki tali sepanjang 7/8  m. Kemudian tali tersebut dipotong 3/7  m, maka sisa tali Ahmad ?', 'mat1'),
-(2, 'Pak Karyo memiliki 11/4  m tali. Tali itu diberikan kepada ayah 6/5 m dan sisanya diberikan kepada kakak. Panjang tali yang diterima kakak ?', 'mat1'),
-(3, 'Ayah memiliki tali sepanjang 23/4 m. Dipakai ayah untuk membuat jemuran sepanjang 17/5  m. Sisa tali ayah ?', 'mat1'),
-(4, 'Kakak memiliki pita merah  9/5 m dan pita putih 5/6  m. Pita-pita tersebut akan diberikan kepada Nugie sepanjang 12/10 m. Sisa pita kakak ?', 'mat1'),
-(5, 'Pak Surip memiliki tanah yang luasnya 5 hektar. 1 2/3 hektar ditanami jagung, 1 1/6 hektar ditanami padi, dan sisanya ditanami kedelai. Berapa hektar tanah yang ditanami kedelai....', 'mat1'),
-(6, 'Bening memiliki pita sepanjang 2/3  m. Bening membeli lagi pita sepanjang 5/4 m. Panjang pita Bening sekarang ?', 'mat1'),
-(7, 'Di dalam keranjang terdapat 7/2 kg beras.  3/4 kg garam dan 7/4  kg gula. Berat seluruh belanjaan ibu ?', 'mat1'),
-(8, 'Ibu berbelanja di pasar membeli 1/4 kg bawang merah , 1/4 kg bawang putih, 1/2 kg dan 4/5 kg minyak goreng. Berat seluruh belanjaan ibu adalah ...', 'mat1'),
-(9, 'Pak Harjo berkeinginan mengganti talang rumah. Untuk bagian depan rumah, talang yang diperlukan 5 ¼ meter, sedangkan untuk dapur 3 3/8 meter, padahal Pak Harjo baru mempunyai talang 4 ½ meter. Berapa meter talang yang harus dibeli Pak Harjo agar dapat mengganti seluruh talang rumahnya...', 'mat1'),
-(10, 'Ibu mempunyai persediaan mentega sebanyak 2/3 kg. karena Adik ingin roti buatan ibu, maka ibu membuatkannya. Untuk membuat roti diperlukan 1/3 mentega. Supaya tidak kehabisan mentega, Ibu membeli lagi ¼ kg untuk persediaan. Berapa kg mentega yang dimiliki Ibu sekarang....', 'mat1');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `soal_latihan`
---
-
-CREATE TABLE `soal_latihan` (
   `no_soal` int(11) NOT NULL,
   `txt_soal` text NOT NULL,
   `a` text NOT NULL,
@@ -176,10 +125,10 @@ CREATE TABLE `soal_latihan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `soal_latihan`
+-- Dumping data for table `soal_evaluasi`
 --
 
-INSERT INTO `soal_latihan` (`no_soal`, `txt_soal`, `a`, `b`, `c`, `d`, `kunci_jawaban`, `kode_soal`) VALUES
+INSERT INTO `soal_evaluasi` (`no_soal`, `txt_soal`, `a`, `b`, `c`, `d`, `kunci_jawaban`, `kode_soal`) VALUES
 (1, 'Satu bambu dipotong menjadi 5 bagian sama panjang. Setiap bagian dari bambu itu nilainya . . ', '1/3', '1/4', '1/5', '1/6', NULL, 'mat1'),
 (2, 'Ibu membeli 3/4 kg tepung terigu. Seperempat kilogram tepung terigu sudah digunakan untuk membuat kue. Sisa tepung terigu ibu sekarang ada . . .  kg', '1/4', '1/2', '3/4', '1', NULL, 'mat1'),
 (3, 'Raihan mempunyai pita 7/8 meter. Untuk membuat kerajinan 3/8 meter. Sisa pita Raihan ada . . . meter', '3/8', '4/8', '5/8', '7/8', NULL, 'mat1'),
@@ -190,6 +139,34 @@ INSERT INTO `soal_latihan` (`no_soal`, `txt_soal`, `a`, `b`, `c`, `d`, `kunci_ja
 (8, 'Bagas membelah semangka menjadi 8 bagian. Bagas kemudian memakan dua bagian semangka. Maka nilai semangka yang dimakan bagas jika ditulis dalam bentuk pecahan adalah ….', '1/2', '8/2', '2/8', '2/3', NULL, 'mat1'),
 (9, 'Bu Yuni membeli 9 butir telur. Ternyata sampai dirumah pecah 1 butuir telur. Banyak telur yang pecah ada . . . butir telur. ', '4/9', '3/9', '2/9', '1/9', NULL, 'mat1'),
 (10, 'Pak Joko memotong sebuah kayu panjang menjadi 10 bagian sama panjang. Empat potong kayu sudah ia gunakan untuk membuat kursi. Berapa bagian sisa kayu milik Pak Joko ? ', '2/5', '3/5', '7/10', '4/5', NULL, 'mat1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `soal_latihan`
+--
+
+CREATE TABLE `soal_latihan` (
+  `no_soal` int(1) NOT NULL,
+  `txt_soal` text NOT NULL,
+  `kode_soal` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `soal_latihan`
+--
+
+INSERT INTO `soal_latihan` (`no_soal`, `txt_soal`, `kode_soal`) VALUES
+(1, 'Ahmad memiliki tali sepanjang 7/8  m. Kemudian tali tersebut dipotong 3/7  m, maka sisa tali Ahmad ?', 'mat1'),
+(2, 'Pak Karyo memiliki 11/4  m tali. Tali itu diberikan kepada ayah 6/5 m dan sisanya diberikan kepada kakak. Panjang tali yang diterima kakak ?', 'mat1'),
+(3, 'Ayah memiliki tali sepanjang 23/4 m. Dipakai ayah untuk membuat jemuran sepanjang 17/5  m. Sisa tali ayah ?', 'mat1'),
+(4, 'Kakak memiliki pita merah  9/5 m dan pita putih 5/6  m. Pita-pita tersebut akan diberikan kepada Nugie sepanjang 12/10 m. Sisa pita kakak ?', 'mat1'),
+(5, 'Pak Surip memiliki tanah yang luasnya 5 hektar. 1 2/3 hektar ditanami jagung, 1 1/6 hektar ditanami padi, dan sisanya ditanami kedelai. Berapa hektar tanah yang ditanami kedelai....', 'mat1'),
+(6, 'Bening memiliki pita sepanjang 2/3  m. Bening membeli lagi pita sepanjang 5/4 m. Panjang pita Bening sekarang ?', 'mat1'),
+(7, 'Di dalam keranjang terdapat 7/2 kg beras.  3/4 kg garam dan 7/4  kg gula. Berat seluruh belanjaan ibu ?', 'mat1'),
+(8, 'Ibu berbelanja di pasar membeli 1/4 kg bawang merah , 1/4 kg bawang putih, 1/2 kg dan 4/5 kg minyak goreng. Berat seluruh belanjaan ibu adalah ...', 'mat1'),
+(9, 'Pak Harjo berkeinginan mengganti talang rumah. Untuk bagian depan rumah, talang yang diperlukan 5 ¼ meter, sedangkan untuk dapur 3 3/8 meter, padahal Pak Harjo baru mempunyai talang 4 ½ meter. Berapa meter talang yang harus dibeli Pak Harjo agar dapat mengganti seluruh talang rumahnya...', 'mat1'),
+(10, 'Ibu mempunyai persediaan mentega sebanyak 2/3 kg. karena Adik ingin roti buatan ibu, maka ibu membuatkannya. Untuk membuat roti diperlukan 1/3 mentega. Supaya tidak kehabisan mentega, Ibu membeli lagi ¼ kg untuk persediaan. Berapa kg mentega yang dimiliki Ibu sekarang....', 'mat1');
 
 --
 -- Indexes for dumped tables
@@ -230,13 +207,13 @@ ALTER TABLE `soal`
 -- Indexes for table `soal_evaluasi`
 --
 ALTER TABLE `soal_evaluasi`
-  ADD KEY `kode_soal` (`kode_soal`);
+  ADD PRIMARY KEY (`no_soal`);
 
 --
 -- Indexes for table `soal_latihan`
 --
 ALTER TABLE `soal_latihan`
-  ADD PRIMARY KEY (`no_soal`);
+  ADD KEY `kode_soal` (`kode_soal`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -246,7 +223,7 @@ ALTER TABLE `soal_latihan`
 -- AUTO_INCREMENT for table `jawaban_siswa`
 --
 ALTER TABLE `jawaban_siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
