@@ -12,7 +12,7 @@ include_once 'connection.php';
     <!-- <a href="#jawaban" class="btn btn-md btn-primary">Kebawah</a> -->
   </div>
     
-  <?php
+      <?php
       if(!empty($_GET['kode_soal']) && empty($_POST['nama_siswa'])){
 
         
@@ -36,25 +36,42 @@ include_once 'connection.php';
           <input type="hidden" name="typ" value="soal_evaluasi">
           <input type="hidden" name="kd_jawab" value="<?php echo$_GET['kode_soal']."_".$new ?>">
 
-            <?php
-            while($row = $res_soal->fetch_assoc()) {
-              ?>
+        <?php
+        while($row = $res_soal->fetch_assoc()) {
+          ?>
 
-            <div class="row ml-2 mr-2">
-              <h6 class="col font-weight-bold font-italic"><?php echo $row['no_soal'].". ".$row['txt_soal'] ?></h6>
+        <div class="row ml-2 mr-2">
+          <h6 class="col font-weight-bold font-italic"><?php echo $row['no_soal'].". ".$row['txt_soal'] ?></h6>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 py-3">
+
+              <fieldset class="form-check mb-4">
+                <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" value="a" checked>
+                <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]">A. <?php echo $row['a'] ?></label>
+              </fieldset>
+
+              <fieldset class="form-check mb-4">
+                <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" value="b">
+                <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]">B. <?php echo $row['b'] ?></label>
+              </fieldset>
+
+              <fieldset class="form-check mb-4">
+                <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" value="c">
+                <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]">C. <?php echo $row['c'] ?></label>
+              </fieldset>
+
+              <fieldset class="form-check mb-4">
+                <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" value="d">
+                <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]">D. <?php echo $row['d'] ?></label>
+              </fieldset>
+
             </div>
 
-            <div class="col-lg-8 col-md-8 mb-4 py-3">
-            
-              <div class="md-form md-outlines">
-                <textarea type="text" id="form101" name="r[<?php echo $row['no_soal'] ?>]" style="background:white;" class="md-textarea form-control" rows="3"></textarea>
-              </div>
-            </div>
-
-              <?php
-              }
-              ?>
-            <input type="submit" class="btn btn-md btn-primary mb-5" value="Kirim Jawaban">
+          <?php
+          }
+          ?> 
+          <input type="submit" class="btn btn-md btn-primary mb-5" value="Kirim Jawaban">
           </form>
           <?php
         } else {
