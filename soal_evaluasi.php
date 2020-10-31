@@ -46,27 +46,27 @@ include_once 'connection.php';
 
         <div class="col-lg-4 col-md-6 mb-4 py-3">
 
-              <fieldset class="form-check mb-4">
-                <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" value="a" checked>
-                <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]">A. <?php echo $row['a'] ?></label>
-              </fieldset>
+          <fieldset class="form-check mb-4">
+            <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" value="a" id="r[<?php echo $row['no_soal'] ?>]a" checked>
+            <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]a">A. <?php echo $row['a'] ?></label>
+          </fieldset>
 
-              <fieldset class="form-check mb-4">
-                <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" value="b">
-                <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]">B. <?php echo $row['b'] ?></label>
-              </fieldset>
+          <fieldset class="form-check mb-4">
+            <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" id="r[<?php echo $row['no_soal'] ?>]b" value="b">
+            <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]b">B. <?php echo $row['b'] ?></label>
+          </fieldset>
 
-              <fieldset class="form-check mb-4">
-                <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" value="c">
-                <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]">C. <?php echo $row['c'] ?></label>
-              </fieldset>
+          <fieldset class="form-check mb-4">
+            <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" id="r[<?php echo $row['no_soal'] ?>]c" value="c">
+            <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]c">C. <?php echo $row['c'] ?></label>
+          </fieldset>
 
-              <fieldset class="form-check mb-4">
-                <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" value="d">
-                <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]">D. <?php echo $row['d'] ?></label>
-              </fieldset>
+          <fieldset class="form-check mb-4">
+            <input class="form-check-input" name="r[<?php echo $row['no_soal'] ?>]" type="radio" id="r[<?php echo $row['no_soal'] ?>]d" value="d">
+            <label class="form-check-label" for="r[<?php echo $row['no_soal'] ?>]d">D. <?php echo $row['d'] ?></label>
+          </fieldset>
 
-            </div>
+        </div>
 
           <?php
           }
