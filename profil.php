@@ -15,7 +15,7 @@ include_once 'template/header.html'
   max-width: 90%;
   float: left;
   clear: both;
-  padding : 0px 10px;" src="assets/img/bg/profil1.jpg" alt="">
+  padding : 0px 10px;" src="assets/img/bg/image.jpg" alt="">
         <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
       </div>
 
