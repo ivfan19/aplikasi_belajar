@@ -1,5 +1,10 @@
 </div>
 </div>
+<!-- <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Universitas Kanjuruhan Malang - Fakultas Ilmu Pendidikan - Pendidikan Guru Sekolah Dasar 2020</span>
+    </div>
+  </footer> -->
 </body>
                 <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="assets/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
@@ -9,6 +14,38 @@
             $(function() {
                 var url  = window.location.href; 
                 var curr = url.lastIndexOf("/");
+
+                //bg
+                if(url.substring(curr+1) != "profil.php")
+                {
+
+                
+                    var images = [
+                        "http://nindy.test/assets/img/bg/1.jpg",
+                        "http://nindy.test/assets/img/bg/2.jpg",
+                        "http://nindy.test/assets/img/bg/3.jpg",
+                        "http://nindy.test/assets/img/bg/4.jpg"
+                        ]
+
+                    var imageHead = document.getElementById("main");
+                    imageHead.style.backgroundImage = "url('http://nindy.test/assets/img/bg/1.jpg')";
+                    imageHead.style.backgroundRepeat  = "no-repeat";
+                    imageHead.style.backgroundSize   = "100%";
+
+                    var i = 0;
+                        setInterval(function() {
+                            imageHead.style.backgroundImage = "url(" + images[i] + ")";
+                            imageHead.style.backgroundRepeat  = "no-repeat";
+                            imageHead.style.backgroundSize   = "100%";
+                            imageHead.style.transition = "background 2s linear";
+
+                            i = i + 1;
+                            if (i == images.length) {
+                                i =  0;
+                            }
+                        }, 5000);
+                    }
+                    //bg
 
                 if(url.substring(curr+1) == "kompetensi.php")
                 {

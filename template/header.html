@@ -14,13 +14,28 @@
     <!-- Bootstrap core CSS -->
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/dist/css/mdb.min.css">
-<link rel="stylesheet" href="assets/dist/css/main-animation.css">
+<!-- <link rel="stylesheet" href="assets/dist/css/main-animation.css"> -->
 
 <!-- js -->
 <script src="../assets/dist/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
     <style>
+      .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        line-height: 60px; /* Vertically center the text there */
+        background-color: #f5f5f5;
+        z-index: 2;
+      }
+      .footer > .container {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -39,7 +54,7 @@
     <!-- Custom styles for this template -->
     <link href="assets/dist/css/dashboard.css" rel="stylesheet">
   </head>
-  <body>
+  <body id="main">
     <nav class="navbar navbar-dark sticky-top bg-dark  p-0 shadow">
       <div class="navbar-brand col-md-3 col-lg-2 mr-0 px-3">
         <a href="#">Aplikasi Pembelajaran</a>
@@ -50,7 +65,7 @@
 
     <div class="container-fluid">
       <div class="row">
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="z-index: 1;">
           <div class="sidebar-sticky pt-3">
               <div class="px-5">
                 <img src="../assets/img/avatar.jpg" alt="..." width="180" height="80" class="img-thumbnail align-self-center mb-5">
