@@ -14,6 +14,7 @@ if(!empty($_GET['kompetensi'])){
     while($row = $res_kompetensi->fetch_assoc()) {
       $path = $row['url_kompetensi'];
       $name = $row['nama'];
+      $linkgdrive = $row['gdrive'];
 
     }
     ?>
@@ -26,7 +27,8 @@ if(!empty($_GET['kompetensi'])){
     
     // $path = '\doc\kompetensi pecahan.pdf';
 
-    echo "<iframe src='".$path."' width=\"100%\" style=\"height:400%\"></iframe>";
+    // echo "<iframe src='".$path."' width=\"100%\" style=\"height:400%\"></iframe>";
+    echo "<iframe src='https://docs.google.com/gview?url=https://drive.google.com/uc?id=".$linkgdrive."&embedded=true' width='100%' height='400%'></iframe>";
 
   }
   else{
