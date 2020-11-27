@@ -15,6 +15,7 @@ if(!empty($_GET['materi'])){
     while($row = $res_materi->fetch_assoc()) {
       $path = $row['url_materi'];
       $name = $row['nama'];
+      $linkgdrive = $row['gdrive'];
 
     }
     ?>
@@ -27,7 +28,8 @@ if(!empty($_GET['materi'])){
     
     // $path = '\doc\materi pecahan.pdf';
 
-    echo "<iframe src='".$path."' width=\"100%\" style=\"height:400%\"></iframe>";
+    // echo "<iframe src='".$path."' width=\"100%\" style=\"height:400%\"></iframe>";
+    echo "<iframe src='https://docs.google.com/gview?url=https://drive.google.com/uc?id=".$linkgdrive."&embedded=true' width='100%' height='400%'></iframe>";
 
   }
   else{
